@@ -19,17 +19,21 @@ public class MyWorld extends World
         addObject(scoreLabel, 80, 80);
         
         // Spawn apple
-        spawnApple();
+        spawnFood();
     }
     
-    /**
-     * Spawn a new apple at top of screen
-     */
-    public void spawnApple() {
+    public void spawnFood() {
+        int rand = Greenfoot.getRandomNumber(2);
+        Food food;
+        if(rand == 0) {
+            food = new Apple();
+        } else {
+            food = new Cherry();
+        }
         int x = Greenfoot.getRandomNumber(600);
-        Apple apple = new Apple();
-        addObject(apple, x, 0);
+        addObject(food, x, 0);
     }
+    
     
     /**
      * Increase score

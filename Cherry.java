@@ -1,14 +1,14 @@
 import greenfoot.*;  // (World, Actor, GreenfootImage, Greenfoot and MouseInfo)
 
 
-public class Apple extends Food
+public class Cherry extends Food
 {
-    public Apple() {
-        super(1);
+    public Cherry() {
+        super(10);
     }
     
     public void act()
     {
-        setLocation(getX(), getY() + 3);
+        setLocation(getX(), getY() + 4);
     }
 }
