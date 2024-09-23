@@ -24,7 +24,7 @@ public class Elephant extends Actor
             MyWorld world = (MyWorld) getWorld();
             world.increaseScore(1);
             getWorld().removeObject(actor);
-            world.spawnApple();
+            world.spawnFood();
         }
         
         // -------Old Code to remove apple--------
