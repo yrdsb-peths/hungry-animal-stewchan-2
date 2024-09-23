@@ -19,11 +19,13 @@ public class Elephant extends Actor
     }
     
     public void checkFoodCollision() {
-        Actor actor = getOneIntersectingObject(Apple.class); // Might be null
+        Actor actor = getOneIntersectingObject(Food.class); // Might be null
         if(actor != null) {
+            Food food = (Food) actor;
             MyWorld world = (MyWorld) getWorld();
-            world.increaseScore(1);
-            getWorld().removeObject(actor);
+            
+            world.increaseScore(food.value);
+            getWorld().removeObject(food);
             world.spawnFood();
         }
         
