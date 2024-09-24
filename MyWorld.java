@@ -1,5 +1,8 @@
 import greenfoot.*;  // (World, Actor, GreenfootImage, Greenfoot and MouseInfo)
 
+/**
+ * Main world
+ */
 public class MyWorld extends World
 {
     public static int score = 0;
