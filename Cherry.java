@@ -7,8 +7,12 @@ public class Cherry extends Food
         super(10);
     }
     
-    public void act()
-    {
-        setLocation(getX(), getY() + 4);
+    public void move() {
+        setLocation(getX(), getY() + 10);
     }
+    
+    // public void act()
+    // {
+        // setLocation(getX(), getY() + 4);
+    // }
 }

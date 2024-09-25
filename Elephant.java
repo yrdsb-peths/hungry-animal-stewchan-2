@@ -8,10 +8,10 @@ public class Elephant extends Actor
     {
         // Elephant controls
         if(Greenfoot.isKeyDown("a")) {
-            move(-2);
+            move(-4);
         }
         if(Greenfoot.isKeyDown("d")) {
-            move(2);
+            move(4);
         }
         
         checkFoodCollision();

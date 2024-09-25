@@ -9,6 +9,7 @@ public class MyWorld extends World
     
     Label scoreLabel = new Label(0, 80);
     
+    Food food;
     public MyWorld()
     {    
         // Create a new world with 600x400 cells with a cell size of 1x1 pixels.
@@ -27,14 +28,21 @@ public class MyWorld extends World
     
     public void spawnFood() {
         int rand = Greenfoot.getRandomNumber(2);
-        Food food;
-        if(rand == 0) {
-            food = new Apple();
-        } else {
-            food = new Cherry();
-        }
+        food = (rand == 0) ? new Apple() : new Cherry();
+        // if(rand == 0) {
+            // food = new Apple();
+        // } else {
+            // food = new Cherry();
+        // }
         int x = Greenfoot.getRandomNumber(600);
         addObject(food, x, 0);
+    }
+    
+    /**
+     * Main World loop
+     */
+    public void act() {
+        food.move();
     }
     
     
